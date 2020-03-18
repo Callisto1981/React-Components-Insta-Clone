@@ -9,14 +9,12 @@ import "./Posts.css";
 // pass props in this file to
 const Post = props => {
   // set up state for the likes
-
+  const [like, setLike] = useState(LikeSection);
   return (
     <div className="post-border">
       <PostHeader
         username={props.post.username}
-        thumbnailUrl={
-          props.post.thumbnailUrl
-        }
+        thumbnailUrl={props.post.thumbnailUrl}
       />
       <div className="post-image-wrapper">
         <img
@@ -35,5 +33,3 @@ const Post = props => {
 };
 
 export default Post;
-
-
